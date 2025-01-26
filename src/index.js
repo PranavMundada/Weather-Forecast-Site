@@ -1,5 +1,5 @@
 import "./styles.css";
-import { format ,addDays} from "date-fns";
+import { format, addDays } from "date-fns";
 
 import thermometercolder from "./WeatherIcons/thermometer-colder.svg";
 import snowflake from "./WeatherIcons/snowflake.svg";
@@ -238,479 +238,482 @@ import windonshore from "./WeatherIcons/wind-onshore.svg";
 import pollengrass from "./WeatherIcons/pollen-grass.svg";
 import horizon from "./WeatherIcons/horizon.svg";
 
-let iconlist={
-thermometercolder,
-snowflake,
-moonwaningcrescent,
-thunderstormsdayovercastsnow,
-timeafternoon,
-thermometermercurycold,
-hail,
-haze,
-tornado,
-thunderstormsday,
-mist,
-overcastnightsnow,
-partlycloudynighthaze,
-thunderstormsovercast,
-thermometermercury,
-partlycloudynightsleet,
-uvindex1,
-thunderstormssnow,
-thermometercelsius,
-extremedaysmoke,
-windbeaufort3,
-uvindex9,
-hazeday,
-overcastfog,
-timelateevening,
-glove,
-overcasthaze,
-overcastdaysleet,
-partlycloudynightrain,
-flaggalewarning,
-thermometerwarmer,
-thermometerglasscelsius,
-sunrise,
-thermometersnow,
-extremesnow,
-uvindex10,
-uvindex2,
-overcastnighthail,
-extremedayhaze,
-windbeaufort9,
-extremenightfog,
-sunhot,
-overcastdrizzle,
-thermometerraindrop,
-extremedaysnow,
-partlycloudynightdrizzle,
-moonlastquarter,
-solareclipse,
-raindrop,
-extremehaze,
-raindropmeasure,
-hazenight,
-overcastdaydrizzle,
-moonfull,
-thunderstormsnight,
-partlycloudynightsnow,
-overcastnight,
-thunderstormsnightextremesnow,
-partlycloudydaysnow,
-umbrella,
-celsius,
-humidity,
-windbeaufort7,
-uvindex4,
-dustday,
-thunderstormsnightsnow,
-flagstormwarning,
-uvindex3,
-timelateafternoon,
-extremesmoke,
-thunderstormsextreme,
-alertfallingrocks,
-overcastrain,
-star,
-windbeaufort1,
-partlycloudydaysmoke,
-extremenightrain,
-clearday,
-windalert,
-flagsmallcraftadvisory,
-partlycloudynightfog,
-overcastnightsmoke,
-hurricane,
-thunderstormsextremesnow,
-thunderstormsnightovercastsnow,
-compass,
-overcastnighthaze,
-thermometer,
-extremerain,
-overcasthail,
-windbeaufort2,
-windbeaufort4,
-pressurehighalt,
-extremenightdrizzle,
-extremefog,
-snowman,
-overcastdaysnow,
-windbeaufort11,
-windsock,
-extremeday,
-extremenight,
-timenight,
-overcastnightdrizzle,
-overcastdayrain,
-partlycloudydayfog,
-windsockweak,
-fog,
-drizzle,
-windbeaufort12,
-clouddown,
-codered,
-flaghurricanewarning,
-raindrops,
-uvindex6,
-overcastsmoke,
-alertavalanchedanger,
-overcast,
-extremedaydrizzle,
-thunderstormsdaysnow,
-extremenightsmoke,
-extremesleet,
-partlycloudydayrain,
-windbeaufort8,
-partlycloudynight,
-codeorange,
-partlycloudydaydrizzle,
-starrynight,
-moonwaninggibbous,
-thermometerglass,
-thunderstormsnightextreme,
-thunderstormsnightovercast,
-extreme,
-extremenightsleet,
-thunderstormsdayextreme,
-overcastnightrain,
-overcastdayhaze,
-partlycloudynighthail,
-extremenightsnow,
-thunderstormsdayovercastrain,
-umbrellawind,
-overcastdayfog,
-dust,
-dustwind,
-moonnew,
-thermometerglassfahrenheit,
-wind,
-fallingstars,
-partlycloudydayhail,
-thunderstormsrain,
-thunderstormsextremerain,
-overcastsnow,
-clearnight,
-notavailable,
-windbeaufort10,
-extremedaysleet,
-moonrise,
-tidehigh,
-uvindex,
-codeyellow,
-rainbowclear,
-snow,
-smoke,
-windbeaufort0,
-pollenflower,
-extremenighthail,
-thunderstormsnightrain,
-overcastdayhail,
-moonfirstquarter,
-rainbow,
-extremenighthaze,
-windsnow,
-lightningbolt,
-thermometerfahrenheit,
-uvindex5,
-pollen,
-timelatemorning,
-extremedrizzle,
-timeevening,
-thunderstormsdayextremesnow,
-beanie,
-pressurelowalt,
-windbeaufort5,
-thermometerwater,
-pressurehigh,
-extremedayrain,
-extremedayfog,
-pressurelow,
-uvindex7,
-partlycloudyday,
-thunderstormsdayrain,
-overcastdaysmoke,
-thunderstorms,
-timelatenight,
-overcastsleet,
-thunderstormsovercastrain,
-thunderstormsdayextremerain,
-cloudup,
-codegreen,
-overcastnightfog,
-umbrellawindalt,
-fognight,
-fogday,
-moonset,
-smokeparticles,
-uvindex8,
-pollentree,
-overcastnightsleet,
-fahrenheit,
-thermometersun,
-thunderstormsnightovercastrain,
-dustnight,
-thunderstormsnightextremerain,
-extremedayhail,
-windoffshore,
-moonwaxinggibbous,
-partlycloudydaysleet,
-thunderstormsovercastsnow,
-sleet,
-barometer,
-uvindex11,
-tidelow,
-partlycloudynightsmoke,
-cloudy,
-sunset,
-thermometermoon,
-moonwaxingcrescent,
-windbeaufort6,
-thunderstormsdayovercast,
-timemorning,
-partlycloudydayhaze,
-overcastday,
-rain,
-extremehail,
-windonshore,
-pollengrass,
-horizon
+let iconlist = {
+  thermometercolder,
+  snowflake,
+  moonwaningcrescent,
+  thunderstormsdayovercastsnow,
+  timeafternoon,
+  thermometermercurycold,
+  hail,
+  haze,
+  tornado,
+  thunderstormsday,
+  mist,
+  overcastnightsnow,
+  partlycloudynighthaze,
+  thunderstormsovercast,
+  thermometermercury,
+  partlycloudynightsleet,
+  uvindex1,
+  thunderstormssnow,
+  thermometercelsius,
+  extremedaysmoke,
+  windbeaufort3,
+  uvindex9,
+  hazeday,
+  overcastfog,
+  timelateevening,
+  glove,
+  overcasthaze,
+  overcastdaysleet,
+  partlycloudynightrain,
+  flaggalewarning,
+  thermometerwarmer,
+  thermometerglasscelsius,
+  sunrise,
+  thermometersnow,
+  extremesnow,
+  uvindex10,
+  uvindex2,
+  overcastnighthail,
+  extremedayhaze,
+  windbeaufort9,
+  extremenightfog,
+  sunhot,
+  overcastdrizzle,
+  thermometerraindrop,
+  extremedaysnow,
+  partlycloudynightdrizzle,
+  moonlastquarter,
+  solareclipse,
+  raindrop,
+  extremehaze,
+  raindropmeasure,
+  hazenight,
+  overcastdaydrizzle,
+  moonfull,
+  thunderstormsnight,
+  partlycloudynightsnow,
+  overcastnight,
+  thunderstormsnightextremesnow,
+  partlycloudydaysnow,
+  umbrella,
+  celsius,
+  humidity,
+  windbeaufort7,
+  uvindex4,
+  dustday,
+  thunderstormsnightsnow,
+  flagstormwarning,
+  uvindex3,
+  timelateafternoon,
+  extremesmoke,
+  thunderstormsextreme,
+  alertfallingrocks,
+  overcastrain,
+  star,
+  windbeaufort1,
+  partlycloudydaysmoke,
+  extremenightrain,
+  clearday,
+  windalert,
+  flagsmallcraftadvisory,
+  partlycloudynightfog,
+  overcastnightsmoke,
+  hurricane,
+  thunderstormsextremesnow,
+  thunderstormsnightovercastsnow,
+  compass,
+  overcastnighthaze,
+  thermometer,
+  extremerain,
+  overcasthail,
+  windbeaufort2,
+  windbeaufort4,
+  pressurehighalt,
+  extremenightdrizzle,
+  extremefog,
+  snowman,
+  overcastdaysnow,
+  windbeaufort11,
+  windsock,
+  extremeday,
+  extremenight,
+  timenight,
+  overcastnightdrizzle,
+  overcastdayrain,
+  partlycloudydayfog,
+  windsockweak,
+  fog,
+  drizzle,
+  windbeaufort12,
+  clouddown,
+  codered,
+  flaghurricanewarning,
+  raindrops,
+  uvindex6,
+  overcastsmoke,
+  alertavalanchedanger,
+  overcast,
+  extremedaydrizzle,
+  thunderstormsdaysnow,
+  extremenightsmoke,
+  extremesleet,
+  partlycloudydayrain,
+  windbeaufort8,
+  partlycloudynight,
+  codeorange,
+  partlycloudydaydrizzle,
+  starrynight,
+  moonwaninggibbous,
+  thermometerglass,
+  thunderstormsnightextreme,
+  thunderstormsnightovercast,
+  extreme,
+  extremenightsleet,
+  thunderstormsdayextreme,
+  overcastnightrain,
+  overcastdayhaze,
+  partlycloudynighthail,
+  extremenightsnow,
+  thunderstormsdayovercastrain,
+  umbrellawind,
+  overcastdayfog,
+  dust,
+  dustwind,
+  moonnew,
+  thermometerglassfahrenheit,
+  wind,
+  fallingstars,
+  partlycloudydayhail,
+  thunderstormsrain,
+  thunderstormsextremerain,
+  overcastsnow,
+  clearnight,
+  notavailable,
+  windbeaufort10,
+  extremedaysleet,
+  moonrise,
+  tidehigh,
+  uvindex,
+  codeyellow,
+  rainbowclear,
+  snow,
+  smoke,
+  windbeaufort0,
+  pollenflower,
+  extremenighthail,
+  thunderstormsnightrain,
+  overcastdayhail,
+  moonfirstquarter,
+  rainbow,
+  extremenighthaze,
+  windsnow,
+  lightningbolt,
+  thermometerfahrenheit,
+  uvindex5,
+  pollen,
+  timelatemorning,
+  extremedrizzle,
+  timeevening,
+  thunderstormsdayextremesnow,
+  beanie,
+  pressurelowalt,
+  windbeaufort5,
+  thermometerwater,
+  pressurehigh,
+  extremedayrain,
+  extremedayfog,
+  pressurelow,
+  uvindex7,
+  partlycloudyday,
+  thunderstormsdayrain,
+  overcastdaysmoke,
+  thunderstorms,
+  timelatenight,
+  overcastsleet,
+  thunderstormsovercastrain,
+  thunderstormsdayextremerain,
+  cloudup,
+  codegreen,
+  overcastnightfog,
+  umbrellawindalt,
+  fognight,
+  fogday,
+  moonset,
+  smokeparticles,
+  uvindex8,
+  pollentree,
+  overcastnightsleet,
+  fahrenheit,
+  thermometersun,
+  thunderstormsnightovercastrain,
+  dustnight,
+  thunderstormsnightextremerain,
+  extremedayhail,
+  windoffshore,
+  moonwaxinggibbous,
+  partlycloudydaysleet,
+  thunderstormsovercastsnow,
+  sleet,
+  barometer,
+  uvindex11,
+  tidelow,
+  partlycloudynightsmoke,
+  cloudy,
+  sunset,
+  thermometermoon,
+  moonwaxingcrescent,
+  windbeaufort6,
+  thunderstormsdayovercast,
+  timemorning,
+  partlycloudydayhaze,
+  overcastday,
+  rain,
+  extremehail,
+  windonshore,
+  pollengrass,
+  horizon,
+};
+
+function temperature(details) {
+  const locAndTemp = document.getElementById("locAndTemp");
+  locAndTemp.innerText = "";
+  const loc = document.createElement("h2");
+  loc.style.marginLeft = "20px";
+  loc.style.marginTop = "20px";
+  loc.style.fontSize = "40px";
+  loc.innerText = details.resolvedAddress;
+  const chanceOfRain = document.createElement("p");
+  chanceOfRain.style.marginLeft = "20px";
+  chanceOfRain.style.fontSize = "25px";
+  chanceOfRain.innerText = `Chance of Rain:${details.currentConditions.precipprob}%`;
+  const temp = document.createElement("h1");
+  temp.style.margin = "20px";
+  temp.style.marginTop = "50px";
+  temp.style.fontSize = "60px";
+  temp.innerText = `${Math.round(((details.currentConditions.temp - 32) * 5) / 9)}°C`;
+  locAndTemp.appendChild(loc);
+  locAndTemp.appendChild(chanceOfRain);
+  locAndTemp.appendChild(temp);
+
+  const weatherIcon = document.getElementById("currIcon");
+  weatherIcon.innerText = "";
+  const img = document.createElement("img");
+  let icon = details.currentConditions.icon;
+  icon = icon.replaceAll("-", "");
+  img.src = iconlist[icon];
+  img.style.height = "250px";
+  weatherIcon.appendChild(img);
 }
 
-function temperature(details){
-    const locAndTemp=document.getElementById("locAndTemp");
-    locAndTemp.innerText="";
-    const loc=document.createElement("h2");
-    loc.style.marginLeft="20px";
-    loc.style.marginTop="20px";
-    loc.style.fontSize="40px";
-    loc.innerText=details.resolvedAddress;
-    const chanceOfRain=document.createElement("p");
-    chanceOfRain.style.marginLeft="20px";
-    chanceOfRain.style.fontSize="25px";
-    chanceOfRain.innerText=`Chance of Rain:${details.currentConditions.precipprob}%`;
-    const temp=document.createElement("h1");
-    temp.style.margin="20px";
-    temp.style.marginTop="50px";
-    temp.style.fontSize="60px";
-    temp.innerText=`${Math.round((details.currentConditions.temp-32)*5/9)}°C`;
-    locAndTemp.appendChild(loc);
-    locAndTemp.appendChild(chanceOfRain);
-    locAndTemp.appendChild(temp);
-
-    const weatherIcon=document.getElementById("currIcon");
-    weatherIcon.innerText="";
-    const img=document.createElement("img");
-    let icon=details.currentConditions.icon;
-    icon=icon.replaceAll("-","");
-    img.src=iconlist[icon];
-    img.style.height="250px";
-    weatherIcon.appendChild(img);
+function otherDetails(details) {
+  const otherParam = document.getElementById("p13");
+  otherParam.innerText = "";
+  otherParam.style.display = "grid";
+  otherParam.style.gridTemplateColumns = "1fr 1fr";
+  otherParam.style.gridTemplateRows = "1fr 1fr 1fr";
+  const uvIndex = document.createElement("div");
+  uvIndex.innerText = `UV INDEX : ${details.currentConditions.uvindex}`;
+  uvIndex.style.gridColumn = "1/2";
+  uvIndex.style.gridRow = "1/2";
+  otherParam.appendChild(uvIndex);
+  const wind = document.createElement("div");
+  wind.innerText = `WIND : ${Math.round(details.currentConditions.windspeed * 1.60934)} KM/H`;
+  wind.style.gridColumn = "2/3";
+  wind.style.gridRow = "1/2";
+  otherParam.appendChild(wind);
+  const humidity = document.createElement("div");
+  humidity.innerText = `HUMIDITY : ${details.currentConditions.humidity}%`;
+  humidity.style.gridColumn = "1/2";
+  humidity.style.gridRow = "2/3";
+  otherParam.appendChild(humidity);
+  const feelsLike = document.createElement("div");
+  feelsLike.innerText = `FEELS LIKE : ${Math.round(((details.currentConditions.feelslike - 32) * 5) / 9)}°C`;
+  feelsLike.style.gridColumn = "2/3";
+  feelsLike.style.gridRow = "2/3";
+  otherParam.appendChild(feelsLike);
+  const pressure = document.createElement("div");
+  pressure.innerText = `PRESSURE : ${details.currentConditions.pressure} mb`;
+  pressure.style.gridColumn = "1/2";
+  pressure.style.gridRow = "3/4";
+  otherParam.appendChild(pressure);
+  const dew = document.createElement("div");
+  dew.innerText = `DEW : ${Math.round(((details.currentConditions.dew - 32) * 5) / 9)}°C`;
+  dew.style.gridColumn = "2/3";
+  dew.style.gridRow = "3/4";
+  otherParam.appendChild(dew);
 }
 
-function otherDetails(details){
-    const otherParam=document.getElementById("p13");
-    otherParam.innerText="";
-    otherParam.style.display="grid";
-    otherParam.style.gridTemplateColumns="1fr 1fr";
-    otherParam.style.gridTemplateRows="1fr 1fr 1fr";
-    const uvIndex=document.createElement("div");
-    uvIndex.innerText=`UV INDEX : ${details.currentConditions.uvindex}`;
-    uvIndex.style.gridColumn='1/2';
-    uvIndex.style.gridRow='1/2';
-    otherParam.appendChild(uvIndex);
-    const wind=document.createElement("div");
-    wind.innerText=`WIND : ${Math.round(details.currentConditions.windspeed*1.60934)} KM/H`;
-    wind.style.gridColumn='2/3';
-    wind.style.gridRow='1/2';
-    otherParam.appendChild(wind);
-    const humidity=document.createElement("div");
-    humidity.innerText=`HUMIDITY : ${details.currentConditions.humidity}%`;
-    humidity.style.gridColumn='1/2';
-    humidity.style.gridRow='2/3';
-    otherParam.appendChild(humidity);
-    const feelsLike=document.createElement("div");
-    feelsLike.innerText=`FEELS LIKE : ${Math.round((details.currentConditions.feelslike-32)*5/9)}°C`;
-    feelsLike.style.gridColumn='2/3';
-    feelsLike.style.gridRow='2/3';
-    otherParam.appendChild(feelsLike);
-    const pressure=document.createElement("div");
-    pressure.innerText=`PRESSURE : ${details.currentConditions.pressure} mb`;
-    pressure.style.gridColumn='1/2';
-    pressure.style.gridRow='3/4';
-    otherParam.appendChild(pressure);
-    const dew=document.createElement("div");
-    dew.innerText=`DEW : ${Math.round((details.currentConditions.dew-32)*5/9)}°C`;
-    dew.style.gridColumn='2/3';
-    dew.style.gridRow='3/4';
-    otherParam.appendChild(dew);
-}
-
-function hourlyTemp(details){
-    const todaysForecast=document.getElementById("p21");
-    todaysForecast.innerText="";
-    todaysForecast.style.backgroundColor="#070F2B";
-    todaysForecast.style.borderRadius="15px";
-    const title=document.createElement("h3");
-    title.innerText="TODAY'S FORECAST : ";
-    title.style.height="15%";
-    title.style.color="white";
-    title.style.margin="15px";
-    const hourlyToday=document.createElement("div");
-    hourlyToday.id="hourlyToday";
-    hourlyToday.style.display="flex";
-    hourlyToday.style.justifyContent="space-evenly";
-    hourlyToday.style.height="75%";
-    const am6=document.createElement("div");
-    am6.style.width="15%";
-    am6.innerHTML=`
+function hourlyTemp(details) {
+  const todaysForecast = document.getElementById("p21");
+  todaysForecast.innerText = "";
+  todaysForecast.style.backgroundColor = "#070F2B";
+  todaysForecast.style.borderRadius = "15px";
+  const title = document.createElement("h3");
+  title.innerText = "TODAY'S FORECAST : ";
+  title.style.height = "15%";
+  title.style.color = "white";
+  title.style.margin = "15px";
+  const hourlyToday = document.createElement("div");
+  hourlyToday.id = "hourlyToday";
+  hourlyToday.style.display = "flex";
+  hourlyToday.style.justifyContent = "space-evenly";
+  hourlyToday.style.height = "75%";
+  const am6 = document.createElement("div");
+  am6.style.width = "15%";
+  am6.innerHTML = `
     <h3>6 AM</h3>
-    <img class="hourlyicon" src="${iconlist[details.days[0].hours[6].icon.replaceAll("-","")]}" ></img>
-    <h2>${Math.round((details.days[0].hours[6].temp-32)*5/9)}°C</h2>
+    <img class="hourlyicon" src="${iconlist[details.days[0].hours[6].icon.replaceAll("-", "")]}" ></img>
+    <h2>${Math.round(((details.days[0].hours[6].temp - 32) * 5) / 9)}°C</h2>
     `;
-    const am9=document.createElement("div");
-    am9.style.width="15%";
-    am9.innerHTML=`
+  const am9 = document.createElement("div");
+  am9.style.width = "15%";
+  am9.innerHTML = `
     <h3>9 AM</h3>
-    <img class="hourlyicon" src="${iconlist[details.days[0].hours[9].icon.replaceAll("-","")]}" ></img>
-    <h2>${Math.round((details.days[0].hours[9].temp-32)*5/9)}°C</h2>
+    <img class="hourlyicon" src="${iconlist[details.days[0].hours[9].icon.replaceAll("-", "")]}" ></img>
+    <h2>${Math.round(((details.days[0].hours[9].temp - 32) * 5) / 9)}°C</h2>
 
     `;
-    const pm12=document.createElement("div");
-    pm12.style.width="15%";
-    pm12.innerHTML=`
+  const pm12 = document.createElement("div");
+  pm12.style.width = "15%";
+  pm12.innerHTML = `
     <h3>12 PM</h3>
-        <img class="hourlyicon" src="${iconlist[details.days[0].hours[12].icon.replaceAll("-","")]}" ></img>
-    <h2>${Math.round((details.days[0].hours[12].temp-32)*5/9)}°C</h2>
+        <img class="hourlyicon" src="${iconlist[details.days[0].hours[12].icon.replaceAll("-", "")]}" ></img>
+    <h2>${Math.round(((details.days[0].hours[12].temp - 32) * 5) / 9)}°C</h2>
     `;
-    const pm3=document.createElement("div");
-    pm3.style.width="15%";
-    pm3.innerHTML=`
+  const pm3 = document.createElement("div");
+  pm3.style.width = "15%";
+  pm3.innerHTML = `
     <h3>3 PM</h3>
-        <img class="hourlyicon" src="${iconlist[details.days[0].hours[15].icon.replaceAll("-","")]}" ></img>
+        <img class="hourlyicon" src="${iconlist[details.days[0].hours[15].icon.replaceAll("-", "")]}" ></img>
 
-    <h2>${Math.round((details.days[0].hours[15].temp-32)*5/9)}°C</h2>
+    <h2>${Math.round(((details.days[0].hours[15].temp - 32) * 5) / 9)}°C</h2>
     `;
-    const pm6=document.createElement("div");
-    pm6.style.width="15%";
-    pm6.innerHTML=`
+  const pm6 = document.createElement("div");
+  pm6.style.width = "15%";
+  pm6.innerHTML = `
     <h3>6 PM</h3>
-        <img class="hourlyicon" src="${iconlist[details.days[0].hours[18].icon.replaceAll("-","")]}" ></img>
-    <h2>${Math.round((details.days[0].hours[18].temp-32)*5/9)}°C</h2>
+        <img class="hourlyicon" src="${iconlist[details.days[0].hours[18].icon.replaceAll("-", "")]}" ></img>
+    <h2>${Math.round(((details.days[0].hours[18].temp - 32) * 5) / 9)}°C</h2>
     `;
-    const pm9=document.createElement("div");
-    pm9.style.width="15%";
-    pm9.innerHTML=`
+  const pm9 = document.createElement("div");
+  pm9.style.width = "15%";
+  pm9.innerHTML = `
     <h3>9 PM</h3>
-        <img class="hourlyicon" src="${iconlist[details.days[0].hours[21].icon.replaceAll("-","")]}" ></img>
-    <h2>${Math.round((details.days[0].hours[21].temp-32)*5/9)}°C</h2>
+        <img class="hourlyicon" src="${iconlist[details.days[0].hours[21].icon.replaceAll("-", "")]}" ></img>
+    <h2>${Math.round(((details.days[0].hours[21].temp - 32) * 5) / 9)}°C</h2>
     `;
-    hourlyToday.appendChild(am6);
-    hourlyToday.appendChild(am9);
-    hourlyToday.appendChild(pm12);
-    hourlyToday.appendChild(pm3);
-    hourlyToday.appendChild(pm6);
-    hourlyToday.appendChild(pm9);
-    todaysForecast.appendChild(title);
-    todaysForecast.appendChild(hourlyToday);
+  hourlyToday.appendChild(am6);
+  hourlyToday.appendChild(am9);
+  hourlyToday.appendChild(pm12);
+  hourlyToday.appendChild(pm3);
+  hourlyToday.appendChild(pm6);
+  hourlyToday.appendChild(pm9);
+  todaysForecast.appendChild(title);
+  todaysForecast.appendChild(hourlyToday);
 }
 
-function showCurrentDetails(details){
-    temperature(details);
-    otherDetails(details);
-    hourlyTemp(details);
+function showCurrentDetails(details) {
+  temperature(details);
+  otherDetails(details);
+  hourlyTemp(details);
 }
 
-function showWeekDetails(location){
-    const sevenDaysforecast=document.getElementById("p22");
-    sevenDaysforecast.style.backgroundColor="#070F2B";
-    sevenDaysforecast.style.margin="20px";
-    sevenDaysforecast.style.borderRadius="15px";
-    sevenDaysforecast.innerText="";
-    const title=document.createElement("h3");
-    title.innerText="NEXT 7-DAY FORECAST : ";
-    title.style.fontSize="larger";
-    title.style.padding="10px";
-    title.style.height="5%";
-    title.style.margin="10px";
-    const sevenDays=document.createElement("div");
-    sevenDays.style.height="90%";
-    const todayDate = new Date();
-    async function fetchSevenDaysWeather() {
-        const promises = [];
-        const dayData = [];
-    
-        for (let i = 0; i < 7; i++) {
-            let link = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/${format(addDays(todayDate, i + 1), "yyyy-MM-dd")}?key=WP4TKUECMWN3SVYMB6EM496HL`;
-            
-            promises.push(fetch(link, { mode: 'cors' }).then(response => response.json()));
-        }
-    
-        const results = await Promise.all(promises);
-    
-        results.forEach((details, index) => {
-            const date = document.createElement("div");
-            date.style.display = "flex";
-            date.style.justifyContent = "space-evenly";
-            date.style.height = "12%";
-            date.style.alignItems="center";
-            date.style.border="1px solid #9290C3";
-            date.style.borderRadius="20px";
-            date.style.margin="10px";
-    
-            const day = document.createElement("h4");
-            day.innerText = `${format(addDays(todayDate, index + 1), 'EEEE')}`;
-    
-            const icon = document.createElement("img");
-            let iconname = details.days[0].icon;
-            iconname = iconname.replaceAll("-", "");
-            icon.src = iconlist[iconname];
-            icon.style.height = "90px";
-    
-            const temp = document.createElement("h4");
-            temp.innerText = `${details.days[0].temp}°C`;
-    
-            date.appendChild(day);
-            date.appendChild(icon);
-            date.appendChild(temp);
-    
-            dayData.push(date);
-        });
-        dayData.forEach(date => sevenDays.appendChild(date));
+function showWeekDetails(location) {
+  const sevenDaysforecast = document.getElementById("p22");
+  sevenDaysforecast.style.backgroundColor = "#070F2B";
+  sevenDaysforecast.style.margin = "20px";
+  sevenDaysforecast.style.borderRadius = "15px";
+  sevenDaysforecast.innerText = "";
+  const title = document.createElement("h3");
+  title.innerText = "NEXT 7-DAY FORECAST : ";
+  title.style.fontSize = "larger";
+  title.style.padding = "10px";
+  title.style.height = "5%";
+  title.style.margin = "10px";
+  const sevenDays = document.createElement("div");
+  sevenDays.style.height = "90%";
+  const todayDate = new Date();
+  async function fetchSevenDaysWeather() {
+    const promises = [];
+    const dayData = [];
+
+    for (let i = 0; i < 7; i++) {
+      let link = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/${format(addDays(todayDate, i + 1), "yyyy-MM-dd")}?key=WP4TKUECMWN3SVYMB6EM496HL`;
+
+      promises.push(
+        fetch(link, { mode: "cors" }).then((response) => response.json()),
+      );
     }
-    
-    fetchSevenDaysWeather();
-    
-    sevenDaysforecast.appendChild(title);
-    sevenDaysforecast.appendChild(sevenDays);
+
+    const results = await Promise.all(promises);
+
+    results.forEach((details, index) => {
+      const date = document.createElement("div");
+      date.style.display = "flex";
+      date.style.justifyContent = "space-evenly";
+      date.style.height = "12%";
+      date.style.alignItems = "center";
+      date.style.border = "1px solid #9290C3";
+      date.style.borderRadius = "20px";
+      date.style.margin = "10px";
+
+      const day = document.createElement("h4");
+      day.innerText = `${format(addDays(todayDate, index + 1), "EEEE")}`;
+
+      const icon = document.createElement("img");
+      let iconname = details.days[0].icon;
+      iconname = iconname.replaceAll("-", "");
+      icon.src = iconlist[iconname];
+      icon.style.height = "90px";
+
+      const temp = document.createElement("h4");
+      temp.innerText = `${Math.round((details.days[0].temp - 32) * (5 / 9))}°C`;
+      console.log((details.days[0].temp - 32) * (5 / 9));
+
+      date.appendChild(day);
+      date.appendChild(icon);
+      date.appendChild(temp);
+
+      dayData.push(date);
+    });
+    dayData.forEach((date) => sevenDays.appendChild(date));
+  }
+
+  fetchSevenDaysWeather();
+
+  sevenDaysforecast.appendChild(title);
+  sevenDaysforecast.appendChild(sevenDays);
 }
 
 function showWeather(location) {
-    let date = format(new Date(), "yyyy-MM-dd");
-    let link1 = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/${date}?key=WP4TKUECMWN3SVYMB6EM496HL`;
+  let date = format(new Date(), "yyyy-MM-dd");
+  let link1 = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/${date}?key=WP4TKUECMWN3SVYMB6EM496HL`;
 
-    async function weatherDetails() {
-        try {
-            const response = await fetch(link1, { mode: 'cors' });
-            if (!response.ok) {
-                throw new Error(`Error: ${response.status} - ${response.statusText}`);
-            }
-            const details = await response.json();
-            showCurrentDetails(details); // Call your function to display the weather details
-            showWeekDetails(location); // Assuming this function also needs a similar error handling
-        } catch (error) {
-            console.error('Failed to fetch weather details:', error);
-            alert('Unable to fetch weather details. Please check the location and try again.');
-        }
+  async function weatherDetails() {
+    try {
+      const response = await fetch(link1, { mode: "cors" });
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status} - ${response.statusText}`);
+      }
+      const details = await response.json();
+      showCurrentDetails(details); // Call your function to display the weather details
+      showWeekDetails(location); // Assuming this function also needs a similar error handling
+    } catch (error) {
+      console.error("Failed to fetch weather details:", error);
+      alert(
+        "Unable to fetch weather details. Please check the location and try again.",
+      );
     }
-    weatherDetails();
+  }
+  weatherDetails();
 }
 
-
-const search=document.getElementById("search");
-search.addEventListener("submit",(e)=>{
-    e.preventDefault();
-    const data=new FormData(e.target);
-    if(data.get('location')!=="")
-    showWeather(data.get('location'));
-})
+const search = document.getElementById("search");
+search.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const data = new FormData(e.target);
+  if (data.get("location") !== "") showWeather(data.get("location"));
+});
